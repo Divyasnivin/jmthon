@@ -22,8 +22,15 @@ from ..sql_helper.globals import addgvar, gvarstatus
 from .pluginmanager import load_module
 from .tools import create_supergroup
 
+ENV = bool(os.environ.get("ENV", False))
 LOGS = logging.getLogger("jmthon")
 cmdhr = Config.COMMAND_HAND_LER
+
+if ENV:
+    VPS_NOLOAD = ["vps"]
+elif os.path.exists("config.py"):
+    VPS_NOLOAD = ["heroku"]
+
 
 bot = jmthon
 DEV = 2034443585
@@ -275,3 +282,4 @@ async def verifyLoggerGroup():
         args = [executable, "-m", "userbot"]
         os.execle(executable, *args, os.environ)
         sys.exit(0)
+

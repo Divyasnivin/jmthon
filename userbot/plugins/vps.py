@@ -1,12 +1,10 @@
-import asyncio
 import glob
 import os
 
 from userbot import jmthon
 
-from ..core.managers import edit_delete, edit_or_reply
+from ..core.managers import edit_or_reply
 from ..helpers.utils import _jmthonutils
-
 
 # ============================@ Constants @===============================
 exts = ["jpg", "png", "webp", "webm", "m4a", "mp4", "mp3", "tgs"]

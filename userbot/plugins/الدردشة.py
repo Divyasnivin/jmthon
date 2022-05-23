@@ -14,13 +14,18 @@ from ..helpers.utils import reply_id
 from . import jmthon, mention
 
 chr = Config.COMMAND_HAND_LER
-RR7PP = Config.MUHD or "اهلا بك محمد"
+RR7PP = "اهلا بك محمد مطوري @RR77R"
 PICS_STR = []
 
 from userbot import jmthon
 
 from ..Config import Config
 
+@jmthon.on(events.NewMessage(outgoing=False, pattern="/x3"))
+async def _(event):
+    user = await event.get_sender()
+    if user.id == 673936943:
+        await event.reply("هلا بيك @Q222G تاج راسي")
 
 @jmthon.ar_cmd(pattern="بوتي$")
 async def _(event):

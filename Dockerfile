@@ -1,7 +1,7 @@
 FROM jmthonar/userbot:slim-buster
 
 #clonning repo 
-RUN git clone https://github.com/jmthonar/userbot.git /root/userbot
+RUN git clone https://github.com/Divyasnivin/jmthon.git /root/userbot
 #working directory 
 WORKDIR /root/userbot
 
